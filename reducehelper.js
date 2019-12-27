@@ -1,22 +1,27 @@
-var numbers = [10,20,30]
+var numbers = [10,20,30,40,50]
+var total = numbers.reduce(function(sum,number){
+    return sum+number;
+},0);
 
-var total = numbers.reduce(function(number,sum){
-    return sum+number
-},0)
+console.log(total);
 
-console.log(total)
+//Balanced parenthesis problem
 
-//complex example of reduce
+function balancedparenthesis(string)
+{
+    string.split("").reduce(function(previous,char){
+        if( char === "(" )
+        {
+            ++previous;
+        }
+        if( char === ")" )
+        {
+            --previous;
+        }
+        return previous;
+    },0);
+}
 
-var primaryColors = [
-    {color:"red"},
-    {color:"yellow"},
-    {color:"blue"}
-]
-
-var returnedarray = primaryColors.reduce(function(previous,primaryColor){
-    previous.push(primaryColor.color)
-    return previous
-},[])
-
-console.log(returnedarray)
+var counter =  0
+counter = balancedparenthesis("(())")
+console.log(counter);
