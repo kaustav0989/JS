@@ -8,8 +8,8 @@ console.log(type);
 
 //Another example
 
-function objectSummary({type, amount})
+function objectSummary({type, amount},{name})
 {
-    return `the type is ${type} and amount is ${amount}`
+    return `the type is ${type} and amount is ${amount}.${name}`
 }
-console.log(objectSummary(expense))
+console.log(objectSummary(expense,{name:"concertium"}))
