@@ -23,3 +23,13 @@ const [ name1, ...rest] = cars  //for elements use []
 console.log(length);
 console.log(name1);
 console.log(rest);
+
+//restructuring objects and arrays at the same time
+
+const companies = [
+    {name:"Google",location:"USA"},
+    {name:"Wipro",location:"INDIA"}
+]
+
+const [{location}] = companies
+console.log(location);
