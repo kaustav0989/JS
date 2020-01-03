@@ -33,3 +33,17 @@ const companies = [
 
 const [{location}] = companies
 console.log(location);
+
+//when to use restructuring
+
+const points = [
+    [4,5],
+    [6,7],
+    [8,9]
+]
+
+var obj = points.map( ([x,y]) => {
+    return {x,y}
+})
+
+console.log(obj)
